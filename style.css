@@ -17,9 +17,43 @@ header div {
 
 .header-container {
     height: 28px;
-    width: 1312px;
+    max-width: 1312px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    margin: 0 auto;
+    padding: 0 32px;
+
+    gap: 200px;
 }
+
+.left-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 300px;
+}
+
+.right-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 370px;
+}
+
+header .left-header>a, header .right-header>a, .drop-down-menu {
+    cursor: pointer;
+    color: black;
+
+    display: flex;
+    align-items: center;
+}
+
+header .sign-or-reg {
+    color: #0654ba;
+}
+
