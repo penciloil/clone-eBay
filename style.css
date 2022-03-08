@@ -57,3 +57,47 @@ header .sign-or-reg {
     color: #0654ba;
 }
 
+@media screen and (max-width:1023px) {
+    .right-header a:first-child {
+        display: none;
+    }
+
+    .right-header {
+        width: 300px;
+        flex-shrink: 0;
+    }
+}
+
+@media screen and (max-width:999px) {
+    .right-header div:first-of-type {
+        display: none;
+    }
+
+    .right-header {
+        width: 220px;
+        flex-shrink: 0;
+    }
+}
+
+@media screen and (max-width:763px) {
+    .left-header span:nth-child(3), .left-header a:nth-child(4){
+        display: none;
+    }
+    
+    .left-header {
+        flex-shrink: 0;
+        width: 250px;
+    }
+
+}
+
+@media screen and (max-width:663px) {
+    header  .left-header>a{
+        display: none;
+    }
+
+    header .left-header {
+        width: 110px;
+        flex-shrink: 0;
+    }
+}
