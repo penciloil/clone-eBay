@@ -101,3 +101,421 @@ header .sign-or-reg {
         flex-shrink: 0;
     }
 }
+
+section.main-body, footer {
+    border-top: 1px solid #ddd;
+    min-width: 570px;
+}
+
+nav.search-bar {
+    height: 60px;
+    max-width: 1312px;
+
+    margin: 0 auto;
+    padding: 0.1rem 0 3.5rem 0;
+}
+
+nav.search-bar .nav-ul {
+    display: flex;
+    align-items: center;
+
+    gap: 0.5rem;
+    padding: 0 32px;
+}
+
+nav.search-bar .ebay-logo img {
+    width: 100px;
+}
+
+nav.search-bar .shop-category {
+    width: 80px;
+    height: 43px;
+    
+    line-height: 1rem;
+
+    display: flex;
+    align-items: center;
+}
+
+nav.search-bar .category-txt {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+nav.search-bar .category-txt:hover {
+    color: #0654ba;
+}
+
+nav.search-bar .search-form {
+    display: grid;
+    flex-grow: 1;
+    grid-template-columns: minmax(270px,auto) 170px 170px 70px;
+}
+
+nav.search-bar .input-placeholder {
+    position: relative;
+}
+
+nav.search-bar .input-placeholder input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+
+    border: 2px solid black;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+}
+
+nav.search-bar .input-placeholder input:focus {
+    outline: none;
+
+}
+
+nav.search-bar .input-placeholder .placeholder {
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.5rem;
+    color: #767676;
+    pointer-events: none;
+}
+
+nav.search-bar .input-placeholder .placeholder i {
+    font-size: 1.2rem;
+}
+
+nav.search-bar .input-placeholder input:focus +.placeholder {
+    color: transparent;
+}
+
+nav.search-bar .input-placeholder input:not(:focus) +.placeholder i{
+    color: #767676;
+    transition: ease-in 0.2s;
+}
+
+nav.search-bar .input-placeholder input:not(:focus) +.placeholder span{
+    color: #767676;
+    transition: ease-in 0.4s;
+}
+
+nav.search-bar .categories {
+    display: flex;
+    justify-content: flex-start;
+
+    border: 2px solid black;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 1px solid #c7c7c7;
+
+    position: relative;
+}
+
+nav.search-bar .categories select {
+    border: none;
+    appearance: none;
+
+    color: #767676;
+    font-size: 0.75rem;
+    padding: 0 1rem;
+
+    width: 100%;
+}
+
+nav.search-bar .categories i{
+    color: #767676;
+
+    position: absolute;
+    right: 0.6rem;
+    top: 0.6rem;
+
+    pointer-events: none;
+}
+
+nav.search-bar .search-btn {
+    background-color: #3665f3;
+    color: white;
+    margin-left: 0.3rem;
+    border: none;
+    cursor:pointer;
+}
+
+nav.search-bar .search-btn:active {
+    transform: translateY(1px);
+}
+
+nav.search-bar .search-btn i {
+    font-size: 1.8rem;
+}
+
+nav.search-bar .advanced-option {
+    color: #767676;
+    font-size: 0.7rem;
+
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+nav.search-bar .advanced-option:hover {
+    color: #0654ba;
+}
+
+
+@media screen and (max-width:963px) {
+    nav.search-bar .advanced-option {
+        display: none;
+    }
+    nav.search-bar .search-form {
+        grid-template-columns: minmax(270px,auto) 170px 170px;
+    }
+}
+
+@media screen and (max-width:863px) {
+    nav.search-bar .search-form {
+        grid-template-columns: minmax(270px,auto) 170px 80px;
+    }
+}
+
+@media screen and (max-width:763px) {
+    nav.search-bar .search-btn span {
+        display: none;
+    }
+    nav.search-bar .search-form {
+        grid-template-columns: minmax(200px,auto) 160px 48px;
+    }
+    nav.search-bar .shop-category {
+        display: none;
+    }
+}
+
+@media screen and (min-width:764px) {
+    nav.search-bar .search-btn i {
+        display: none;
+    }
+}
+
+@media screen and (max-width:663px) {
+    .placeholder i {
+        display: none;
+    }
+}
+
+section.main-body .nav-container {
+    max-width: 1312px;
+    height: 33px;
+
+    border-top: 1px solid #ddd;
+    margin: 0 auto;
+    padding: 0 125px;
+}
+
+section.main-body .nav-container .center-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.main-body .nav-container .item i, 
+section.main-body .nav-container .item a {
+    color: #555;
+    font-size: 0.75rem;
+}
+
+section.main-body .nav-container .item a:hover {
+    color: #0654ba;
+    text-decoration: none;
+}
+
+section.main-body .nav-container .item-13 {
+    display: none;
+}
+
+section.main-body .nav-container .item-13 a {
+    display: flex;
+    align-items: center;
+}
+
+section.main-body .nav-container .item a.active {
+    font-weight: 700;
+}
+
+section.main-body .nav-container .item {
+    position: relative;
+}
+
+section.main-body .nav-container .item a.active::before {
+    content: "";
+    width: 38px;
+    height: 2px;
+    background-color: #333;
+
+    position: absolute;
+    bottom: -0.1rem;
+}
+
+@media screen and (max-width:1312px) {
+    section.main-body .nav-container {
+        display: grid;
+        justify-content: space-around;
+    }
+
+    section.main-body .nav-container .center-nav {
+        width: 1062px;
+
+        gap: 1.5em;
+    }
+}
+
+@media screen and (max-width:1090px) {
+    section.main-body .nav-container .center-nav {
+        width: 1020px;
+    }
+    section.main-body .nav-container .item-11,
+    section.main-body .nav-container .item-12 {
+        display: none;
+    }
+    section.main-body .nav-container .item-13 {
+        display: flex;
+    }
+}
+
+@media screen and (max-width:1025px) {
+    section.main-body .nav-container .center-nav {
+        width: 950px;
+    }
+    section.main-body .nav-container .item-10 {
+        display: none;
+    }
+}
+
+@media screen and (max-width:975px) {
+    section.main-body .nav-container .center-nav {
+        width: 800px;
+    }
+    section.main-body .nav-container .item-9 {
+        display: none;
+    }
+}
+
+@media screen and (max-width:850px) {
+    section.main-body .nav-container .center-nav {
+        width: 650px;
+    }
+    section.main-body .nav-container .item-8 {
+        display: none;
+    }
+}
+
+@media screen and (max-width:680px) {
+    section.main-body .nav-container .center-nav {
+        width: 600px;
+    }
+    section.main-body .nav-container .item-7 {
+        display: none;
+    }
+}
+
+@media screen and (max-width:640px) {
+    section.main-body .nav-container {
+        min-width: 570px;
+    }
+    section.main-body .nav-container .center-nav {
+        width: 500px;
+    }
+    section.main-body .nav-container .item-6 {
+        display: none;
+    }
+}
+
+section.main-body .banner {
+    max-width: 1312px;
+    height: 400px;
+    margin: 0 auto;
+
+    transition: 0.5s;
+}
+
+section.main-body .banner .container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: 250px 1fr;
+    column-gap: 22px;
+    row-gap: 20px;
+}
+
+section.main-body .banner .container .parent {
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+section.main-body .banner .container .parent-1 {
+    grid-row: span 2;
+}
+
+section.main-body .banner .container .child-1 {
+    height: 100%;
+    background-image: url(images/1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+section.main-body .banner .container .child-2 {
+    height: 100%;
+    background-image: url(images/2.png);
+    background-size: cover;
+    background-position: center;
+}
+
+section.main-body .banner .container .child-3 {
+    height: 100%;
+    background-image: url(images/3.png);
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width:1312px) {
+    section.main-body .banner {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    section.main-body .banner {
+        padding: 0;
+    }
+    section.main-body .banner .container .parent-2,
+    section.main-body .banner .container .parent-3 {
+        display: none;
+    }
+    section.main-body .banner .container {
+        height: 100%;
+
+        grid-template-columns: 1fr;
+    }
+    section.main-body .banner .container .child-1 {
+        transform: scale(1.05);
+    }
+}    
+
+section.collections {
+    max-width: 1312px;
+    
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+section.collections h2 {
+    font-weight: 200;
+    color: #555;
+}
+
+section.collections .ad-containers{
+    display: flex;
+    justify-content: space-between;
+}
