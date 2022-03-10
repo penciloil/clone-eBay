@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --card-pic-width:150px;
+    --card-pic-height:var(--card-pic-width);
+}
+
 body {
     font-family: 'Martel Sans', sans-serif;
     margin: 0;
@@ -516,6 +521,196 @@ section.collections h2 {
 }
 
 section.collections .ad-containers{
+    border-top: 1px solid #ddd;
+
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    column-gap: 45px;
+}
+
+section.collections .left-ad,
+section.collections .right-ad {
+    width: 585px;
+    height: 600px;
+    
+    display: grid;
+    grid-template-columns: 1fr 140px;
+    grid-template-rows: repeat(3, 140px) 1fr;
+
+    border: 1px solid #ddd;
+    margin: 2rem 0;
+}
+
+section.collections .left-ad .main-photo,
+section.collections .right-ad .main-photo {
+    grid-row: span 3;
+
+    background-size: cover;
+    background-position: center;
+
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+section.collections .left-ad .main-photo.big {
+    background-image: url(images/product1.jpg);
+}
+
+section.collections .right-ad .main-photo.big {
+    background-image: url(images/product2.jpg);
+}
+
+section.collections .thumbnail-container {
+    display: grid;
+    grid-row: span 3;
+}
+
+section.collections .left-ad .pic,
+section.collections .right-ad .pic {
+    background-size: cover;
+    background-position: center;
+
+    border-bottom: 1px solid #ddd;
+}
+
+section.collections .left-ad .item-1 {
+    background-image: url(images/thumbnail1_1.jpg);
+}
+
+section.collections .left-ad .item-2 {
+    background-image: url(images/thumbnail1_2.jpg);
+}
+
+section.collections .left-ad .item-3 {
+    background-image: url(images/thumbnail1_3.png);
+}
+
+section.collections .right-ad .item-1 {
+    background-image: url(images/thumbnail2_1.jpg);
+}
+
+section.collections .right-ad .item-2 {
+    background-image: url(images/thumbnail2_2.jpg);
+}
+
+section.collections .right-ad .item-3 {
+    background-image: url(images/thumbnail2_3.jpg);
+}
+
+section.collections .description-container {
+    display: grid;
+
+    grid-template-columns: 1fr 140px;
+    grid-template-rows: 180px;
+    grid-column: span 2;
+}
+
+section.collections .description-container .description {
+    padding: 0 0.8rem;
+}
+
+section.collections .description-container .description h2 {
+    color: black;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+section.collections .description-container .description p {
+    line-height: 1.5rem;
+    color: #555;
+
+    text-align: justify;
+}
+
+section.collections .description-container .list-container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    place-items: center;
+}
+
+section.collections .description-container .list-container .details {
+    color: #333;
+    font-weight: 700;
+    font-size: 0.9rem; 
+    width: 100%;
+    text-align: center;
+
+    position: relative;
+}
+
+section.collections .description-container .list-container .detail-2::before,
+section.collections .description-container .list-container .detail-3::before {
+    content: "";
+    width: 90%;
+    height: 1px;
+    background-color: #767676;
+
+    position: absolute;
+    top: -1rem;
+    left: 10px;
+}
+
+section.collections .description-container .list-container .detail-3 a {
+    color: #0654ba;
+}
+
+section.collections .description-container .list-container .detail-3 a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width:1214px) {
+    section.collections .ad-containers{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+section.card {
+    max-width: 1312px;
+    margin: 0 auto;
+}
+
+section.card .title {
+    display: flex;
+    align-items: center;
+}
+
+section.card .title h2 {
+    font-weight: 200;
+    color: #555;
+}
+
+section.card .title span {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+section.card .title i {
+    font-size: 1.5rem;
+}
+
+section.card .container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: space-between;
+}
+
+section.card .container .card-item {
+    display: flex;
+    flex-direction: column;
+}
+
+section.card .container .card-pic {
+    background-position: center;
+    background-size: cover;
+
+    width: var(--card-pic-width);
+    height: var(--card-pic-height);
+    border-radius: 50%;
+
+    transition: 0.5s;
 }
