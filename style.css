@@ -702,6 +702,7 @@ section.card .container {
 section.card .container .card-item {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 section.card .container .card-pic {
@@ -713,4 +714,48 @@ section.card .container .card-pic {
     border-radius: 50%;
 
     transition: 0.5s;
+}
+
+section.card .container .card-item1 .card-pic {
+    background-image: url(images/t1.png);
+}
+
+section.card .container .card-item2 .card-pic {
+    background-image: url(images/t2.png);
+}
+
+section.card .container .card-item3 .card-pic {
+    background-image: url(images/t3.png);
+}
+
+section.card .container .card-item4 .card-pic {
+    background-image: url(images/4.png);
+}
+
+section.card .container .card-item5 .card-pic {
+    background-image: url(images/5.png);
+}
+
+section.card .container .card-item6 .card-pic {
+    background-image: url(images/6.png);
+}
+
+section.card .container .card-item7 .card-pic {
+    background-image: url(images/7.png);
+}
+
+section.card .container .card-item .card-title {
+    color: black;
+    font-size: 0.95rem;
+
+    text-align: center;
+}
+
+
+section.card .container .card-item:hover > .card-pic {
+    box-shadow: 0 0 2px black;
+}
+
+section.card .container .card-item:hover > .card-title {
+    text-decoration: underline;
 }
