@@ -694,6 +694,8 @@ section.card .title i {
 }
 
 section.card .container {
+    padding: var(--card-container-padding);
+
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     justify-content: space-between;
@@ -758,4 +760,110 @@ section.card .container .card-item:hover > .card-pic {
 
 section.card .container .card-item:hover > .card-title {
     text-decoration: underline;
+}
+
+section.card .second-line.hidden {
+    display: none;
+}
+
+:root {
+    --card-pic-width:150px;
+    --card-pic-height:var(--card-pic-width);
+    --card-width:100vw;
+    --card-container-padding: 44px;
+    --card-container-gap: 22px;
+}
+
+@media screen and (max-width:1312px) {
+    section.card {
+        width: var(--card-width);
+    }
+
+    section.card .container {
+    
+        column-gap: var(--card-container-gap);
+    }
+
+    section.card .container .card-item {
+        width: calc((var(--card-width) - var(--card-container-padding) * 2 - var(--card-container-gap) * 6) / 7);
+    }
+
+    section.card .container .card-pic {
+        width: calc((var(--card-width) - var(--card-container-padding) * 2 - var(--card-container-gap) * 6) / 7);
+        height: calc((var(--card-width) - var(--card-container-padding) * 2 - var(--card-container-gap) * 6) / 7);
+    }
+}
+
+@media screen and (max-width:767px) {
+    section.card {
+        --card-width: 98vw;
+    }
+    
+    section.card .container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+        "a b c d "
+        "second second second second" ;
+    }
+
+    section.card .container .card-item1 {
+        grid-area: a;
+    }
+
+    section.card .container .card-item2 {
+        grid-area: b;
+    }
+
+    section.card .container .card-item3 {
+        grid-area: c;
+    }
+
+    section.card .container .card-item4 {
+        grid-area: d;
+    }
+
+    section.card .second-line {
+        grid-area: second;
+    }
+
+    section.card .card-item.hidden {
+        display: none;
+    }
+    
+    section.card .container .card-item {
+        width: calc((var(--card-width) - var(--card-container-padding) * 2 - var(--card-container-gap) * 3) / 4);
+    }
+
+    section.card .container .card-pic {
+        width: calc((var(--card-width) - var(--card-container-padding) * 2 - var(--card-container-gap) * 3) / 4);
+        height: calc((var(--card-width) - var(--card-container-padding) * 2 - var(--card-container-gap) * 3) / 4);
+    }
+
+
+    section.card .second-line.hidden {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        width: 78%;
+
+        padding: calc((var(--card-width) - var(--card-container-padding) * 2 - var(--card-container-gap) * 3) / 4 / 2 + 12px);
+        column-gap: var(--card-container-gap);
+    }
+}
+
+footer {
+
+}
+
+footer .container {
+    max-width: 1312px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer .container p {
+    color: #555;
+    padding-right: 0 3rem;
 }
